@@ -1,12 +1,15 @@
 ---
 tasks:
 - id: 1
-  title: Bake Bread
-  description: Buy yeast and start the oven
+  title: Hi
+  description: Hi
 - id: 2
-  title: Get Stoned
-  description: Smoke pot
+  title: Hi
+  description: Hi
 - id: 3
-  title: Buy beer
-  description: Go to argonauts
-total: 3
+  title: Hi
+  description: Hi
+- id: 4
+  title: Bake Cookies
+  description: "eat\r\n"
+total: 4

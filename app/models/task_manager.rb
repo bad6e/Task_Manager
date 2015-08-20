@@ -22,14 +22,23 @@ class TaskManager
   end
 
   def self.all
-    raw_tasks.map { |data| Task.new(data) }
+    raw_tasks.map { |data| Task.new(data)  }
   end
 
   def self.raw_task(id)
-    raw_tasks.find { |task| task["id"] == id }
+    raw_tasks.find {|task| task["id"]== id}
   end
 
   def self.find(id)
     Task.new(raw_task(id))
   end
 end
+# We define a class method called create which will accept a task hash.
+
+# Inside of this transaction, we try to find ['tasks'].
+# If it doesn't exist, we make it an empty array ([]).
+# We also want to keep track of a total number of tasks, so we either find that (database['total']) or assign it to 0.
+# Next, we increase that total by 1 (database['total'] += 1) because we are creating a new task.
+# Finally, we take our database['tasks']
+# and shovel in a hash that includes an id key with a value of the total number of tasks,
+# a title key with a value of task[:title], and a description key with a value of task[:description].

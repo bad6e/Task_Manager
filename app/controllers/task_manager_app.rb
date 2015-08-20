@@ -1,8 +1,8 @@
 require 'models/task_manager'
-
+require 'models/task'
 
 class TaskManagerApp < Sinatra::Base
-  set :root, File.join(File.dirname(__FILE__), '..')
+  set :root, File.join(File.dirname(__FILE__),'..')
 
   get '/' do
     erb :dashboard
@@ -17,19 +17,13 @@ class TaskManagerApp < Sinatra::Base
     erb :new
   end
 
-  post '/tasks' do
-    TaskManager.create(params[:task])
-    redirect '/tasks'
-  end
-
   get '/tasks/:id' do |id|
     @task = TaskManager.find(id.to_i)
     erb :show
   end
 
-
-
-
-
-
+  post '/tasks' do
+    TaskManager.create(params[:task])
+    redirect '/tasks'
+  end
 end
