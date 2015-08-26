@@ -1,11 +1,32 @@
-<form action="/tasks" method="post">
-  <p>Enter a new task:</p>
-  <input type='text' name='task[title]'/><br/>
-  <textarea name='task[description]'></textarea><br/>
-  <input type='submit'/>
-</form>
+<div class='container'>
+  <div class='row well'>
+    <div class='col-md-12'>
+      <form class="form-horizontal" action="/tasks" method="post">
+        <div class="form-group">
+          <label for="inputtask" class="col-sm-2 control-label">Enter a new task:</label>
+          <div class="col-sm-10">
+            <input type="text" name='task[title]' class="form-control" placeholder="Task">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputtask" class="col-sm-2 control-label">Enter a new description:</label>
+          <div class="col-sm-10">
+            <textarea type="text" name='task[description]' class="form-control" placeholder="Description"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-<h4><a href="/">Return to Bret's Task Manager</h4>
+<div class='container'>
+  <h5><a href="/">Return to Bret's Task Manager</h5>
+</div>
 
 
 <!-- Here we have a form with an action (url path) of /tasks and a method post -->

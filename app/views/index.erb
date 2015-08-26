@@ -1,8 +1,36 @@
-<h1>All Tasks</h1>
+<div class='container'>
+  <div class='row well'>
+    <h1>All Tasks</h1>
+  </div>
+</div>
 
-<% @tasks.each do |task| %>
-   <h3><%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
-<% end %>
+<div class='container'>
+  <div class='row well'>
 
-<h4><a href="/">Return to Bret's Task Manager</h4>
+    <% @tasks.each do |task| %>
+     <table class="table">
+        <h4><%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a></h4>
+
+         <a href="/tasks/<%= task.id %>/edit">Edit</a>
+
+         <form action="/tasks/<%= task.id %>" method= "POST">
+
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="delete"/>
+
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+<div class='container'>
+  <div class='row well'>
+    <h4><a href="/">Return to Bret's Task Manager</h4>
+  </div>
+</div>
+
+
+
+
 

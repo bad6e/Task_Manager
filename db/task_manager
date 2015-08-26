@@ -1,15 +1,9 @@
 ---
 tasks:
-- id: 1
-  title: Hi
-  description: Hi
-- id: 2
-  title: Hi
-  description: Hi
-- id: 3
-  title: Hi
-  description: Hi
-- id: 4
+- id: 6
   title: Bake Cookies
-  description: "eat\r\n"
-total: 4
+  description: Preheat the oven
+- id: 7
+  title: Tell Travis he looks funny
+  description: I hope I don't offend him
+total: 7
