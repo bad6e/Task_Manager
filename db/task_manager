@@ -1,9 +1,6 @@
 ---
 tasks:
-- id: 6
-  title: Bake Cookies
-  description: Preheat the oven
-- id: 7
-  title: Tell Travis he looks funny
-  description: I hope I don't offend him
-total: 7
+- id: 12
+  title: Bake Bread
+  description: Buy Yeast
+total: 12
