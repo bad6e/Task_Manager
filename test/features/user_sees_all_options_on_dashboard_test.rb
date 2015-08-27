@@ -1,6 +1,7 @@
 require_relative "../test_helper"
 
-class UserSeesAllTasksTest < FeatureTest
+class UserSeesAllOptionsOnDashBoardTest < FeatureTest
+
   def test_it_says_hello_to_brets_task_manager
     visit "/"
     assert page.has_content?("Bret's Task Manager")

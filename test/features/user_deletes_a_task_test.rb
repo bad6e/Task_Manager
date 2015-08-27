@@ -1,8 +1,6 @@
 require_relative "../test_helper"
 
-
 class UserDeletesATasKTest < FeatureTest
-
   def test_user_can_delete_a_task
     visit "/"
     click_link "New Task"
