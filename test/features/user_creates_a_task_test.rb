@@ -6,7 +6,7 @@ class UserCreatesATaskTest < FeatureTest
     click_link "New Task"
     fill_in "task[title]", with: "Go home"
     fill_in "task[description]", with: "It's been a long day"
+    assert_equal "/tasks/new", current_path
     click_button "Submit"
-    assert_equal "/tasks", current_path
   end
 end

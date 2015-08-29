@@ -3,11 +3,9 @@ require_relative '../test_helper'
 class TaskTest < Minitest::Test
 
   def test_it_assigns_the_proper_attributes
-    attributes = {"id"=>1, "description"=>"This task", "title"=> "New task"}
-    task = Task.new(attributes)
-
-    assert_equal 1, task.id
-    assert_equal "This task", task.description
-    assert_equal "New task", task.title
+    data = {:title => "Task Test 1", :description => "Task Test 2"}
+    task = Task.new(data)
+    assert_equal "Task Test 1", task.title
+    assert_equal "Task Test 2", task.description
   end
 end

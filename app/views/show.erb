@@ -1,13 +1,17 @@
-
-
 <div class='container'>
   <div class='row well'>
-    <h1><%= @task.title %></h1>
+    <h1 id='show-header'> Task </h1>
+  </div>
+</div>
+
+<div class='container' >
+  <div class='row well'>
+    <h1 id="container_info"><%= @task.title %></h1>
     <p><%= @task.description %></p>
   </div>
 </div>
 
-<div class='container'>
+<div class='container' id='show-footer'>
   <div class='row well'>
     <a href="/tasks">Return to Task Index</a>
   </div>

@@ -7,11 +7,16 @@ class UserSeesAllOptionsOnShowTest < FeatureTest
     click_link "New Task"
     fill_in "task[title]", with: "Go home"
     fill_in "task[description]", with: "It's been a long day"
+    assert_equal "/tasks/new", current_path
     click_button "Submit"
-    assert_equal "/tasks", current_path
 
-    visit "/tasks/1"
-    click_link "Return to Task Index"
-    assert_equal "/tasks", current_path
+    click_link "Go home"
+    within("#show-header") do
+      assert page.has_content?("Task")
+    end
+
+    within("#show-footer") do
+      assert page.has_content?("Return to Task Index")
+    end
   end
 end

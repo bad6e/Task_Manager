@@ -9,15 +9,24 @@ class UserEditsATasKTest < FeatureTest
   end
 
   def test_user_can_edit_a_task
+    #This creates a task
     visit "/"
     click_link "New Task"
     fill_in "task[title]", with: "Go home"
     fill_in "task[description]", with: "It's been a long day"
+    assert_equal "/tasks/new", current_path
     click_button "Submit"
+
+    #This edits the task
     click_link "Edit"
-    fill_in "task[title]", with: "Go home"
+    fill_in "task[title]", with: "Go home now"
     fill_in "task[description]", with: "It's been a long day"
     click_button "Submit"
-    assert_equal "/tasks/1", current_path
+    within("#container_info") do
+      assert page.has_content?("Go home now")
+    end
+
+
+
   end
 end
